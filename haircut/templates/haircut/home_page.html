@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Amazing Amy's Barbershop</title>
+</head>
+<body>
+    <h1>Amazing Amy's Barbershop</h1>
+    <p>Your convinience is our duty</p>
+
+    <!-- Barber 1 -->
+    <p>Peter</p>
+    <img src="http://tse4.mm.bing.net/th?id=OIP.POfQM0O3UQDAG5Yf9tkcHAHaD9&pid=Api"
+    <!-- Barber 2 -->
+    <p>Howard</p>
+    <img src="http://tse1.mm.bing.net/th?id=OIP.mla5koiyZ-bTdi8rhkVQxAHaE8&pid=Api"
+
+    <!-- Barber 3 -->
+    <p>Harry</p>
+    <img scr="https://tse1.mm.bing.net/th?id=OIP.eBsUlUPTYmvTYLAojaL4_wHaE8&pid=Api"
+
+    <!-- User Form -->
+       <h1>Place Your Order</h1>
+    <form action="{% url 'haircut:home_page' %} " method="POST">
+        {% csrf_token %}
+        <input placeholder="Please Type Customer Name" type="text" name="customer_name">
+        <input type="text" name="barber_name">
+        <input type="text" name="our_time">
+        <input type="submit" name="">
+
+
+    </form>
+    <h1>Your Order</h1>
+    <p>Your Barber Choice: {{customer_name}}</p>
+    
+</body>
+</html>
+ 
